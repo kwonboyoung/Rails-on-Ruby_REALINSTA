@@ -1,0 +1,8 @@
+<h1><%= @post.id%>번째 상세 Story</h1>
+
+    사진 : <%=image_tag(@post.image_url)%><br>
+    스 토 리  : <%= @post.story %><br>
+
+<%=link_to "수정", edit_post_path(@post.id) %>
+<%=link_to "삭제", post_path(@post.id), method:"delete", data:{confirm:"정말 삭제하시겠습니까?"}%><br>
+<%= link_to "홈으로", posts_path %>

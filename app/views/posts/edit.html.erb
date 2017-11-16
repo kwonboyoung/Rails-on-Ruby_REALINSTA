@@ -1,0 +1,7 @@
+<h1><%= @post.id%>번째 story 수정하기</h1>
+
+<%= form_tag(post_path(@post.id), method:"put") do %>
+    사진 링크 : <%= text_field_tag(:image_url, @post.image_url)%><br>
+    스 토 리  : <%= text_area_tag(:story, @post.story, size: "22x6")%><br>
+    <%= submit_tag("수정 완료")%>
+<%end%>
